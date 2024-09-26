@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi-hole Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div style="display: flex; align-items: center;">
+        <img src="icons/icon32.png" alt="Pi-hole Icon" style="margin-left: 10px;">
+        <h1 style="margin: 0;">Pi-hole Control</h1>
+    </div>
+    
+    <button id="toggleAddPihole" class="collapsible">Add a Pi-hole</button>
+    <div class="content" id="addPiholeSection" style="display: none;">
+        <label for="piholeAddress">Pi-hole Address:</label>
+        <input type="text" id="piholeAddress" placeholder="http://192.168.1.10" />
+
+        <label for="apiKey">API Key:</label>
+        <input type="text" id="apiKey" placeholder="Enter API key" />
+
+        <button id="save">Add Pi-hole</button>
+    </div>
+
+    <label for="piholeList">Select Pi-hole:</label>
+    <select id="piholeList">
+    </select>
+
+    <div id="piholeStatus">Select a Pi-hole to see its status</div>
+
+    <button id="enable">Enable Pi-hole</button>
+    <button id="disable">Disable Pi-hole</button>
+    <button id="disableAll">Disable All Pi-holes</button>
+    <button id="enableAll">Enable All Pi-holes</button>
+    <hr/>
+    <button id="deletePihole">Delete Pi-hole</button>
+
+    <div id="notification" class="notification hidden"></div>
+
+    <div id="confirmDeleteModal" class="modal hidden">
+        <div class="modal-content">
+            <p id="confirmMessage"></p>
+            <button id="confirmDeleteYes">Yes</button>
+            <button id="confirmDeleteNo">No</button>
+        </div>
+    </div>
+
+
+    <script src="popup.js"></script>
+</body>
+</html>
