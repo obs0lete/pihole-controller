@@ -1,4 +1,4 @@
-# Pihole Controller
+# Pi-hole Controller
 Manage your Pi-hole instances directly from your browser.
 
 ![image description](https://raw.githubusercontent.com/obs0lete/pihole-controller/master/image.png)
