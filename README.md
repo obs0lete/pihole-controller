@@ -1,0 +1,2 @@
+# pihole-controller
+Manage your Pi-hole instances directly from your browser.
